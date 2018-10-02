@@ -139,7 +139,7 @@ Player.prototype.renderScoreBoard = function() {
 };
 // This function is for moving the playe
 Player.prototype.handleInput = function(key) {
-    if (key === 'left' && this.x > 0) {
+    if (key === 'left' && this.x > TILE_WIDTH) {
         this.x -= TILE_WIDTH;
     } else if (key === 'right' && this.x < 395) {
         this.x += TILE_WIDTH;
