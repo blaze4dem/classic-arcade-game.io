@@ -49,7 +49,7 @@ var Player = function() {
     // The image/sprite for our players, this uses
     // a helper we've provided to easily load images
     this.sprite = playerimg;
-    this.x = 20 + 120 * (Math.floor(Math.random() * 4)); //randomize x position
+    this.x = 100 * (Math.floor(Math.random() * 4)); //randomize x position
     this.y = 350;
     this.speed = 10;
 };
@@ -103,7 +103,7 @@ Player.prototype.checkCollisions = function() {
 // Reset the player when it loses life or reaches goals.
 Player.prototype.reset = function() {
     this.x = 100;
-    this.y = 400;
+    this.y = 350;
 };
 // Player moves to water when colliding with princess
 Player.prototype.water = function() {
@@ -139,9 +139,9 @@ Player.prototype.renderScoreBoard = function() {
 };
 // This function is for moving the playe
 Player.prototype.handleInput = function(key) {
-    if (key === 'left' && this.x > TILE_WIDTH) {
+    if (key === 'left' && this.x > 0) {
         this.x -= TILE_WIDTH;
-    } else if (key === 'right' && this.x < 395) {
+    } else if (key === 'right' && this.x <= 395) {
         this.x += TILE_WIDTH;
     } else if (key === 'up' && this.y > 0) {
         this.y -= TILE_HEIGHT;
