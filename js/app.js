@@ -98,7 +98,7 @@ Player.prototype.checkCollisions = function() {
 				this.reset();
 			}
         }
-		 		
+		 		 
 }
 // Reset the player when it loses life or reaches goals.
 Player.prototype.reset = function() {
